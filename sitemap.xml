@@ -6,7 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://LitDarkness.github.io/blog/20221230/</loc>
+         <loc>https://LitDarkness.github.io/blog/</loc>
+         <lastmod>2022-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LitDarkness.github.io/blog/posts/20221230/</loc>
+         <lastmod>2022-12-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LitDarkness.github.io/blog/posts/previous/</loc>
          <lastmod>2022-12-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
