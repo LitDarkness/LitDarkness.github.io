@@ -9,5 +9,5 @@
 - [罗素公理系统的几个见解](posts/zhihu-04.md)
 - [区间长度4与整系数多项式的根分布的限制问题](posts/zhihu-03.md)
 - [关于一道代数不等式的探究](posts/zhihu-02.md)
-- [浅谈指数族](posts/zhihu-01.md)
 - [有限域上的费马大定理与 Schur 定理](posts/zhihu-00.md)
+- [浅谈指数族](posts/zhihu-01.md)
