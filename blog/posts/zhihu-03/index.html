@@ -1,0 +1,1150 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://litdarkness.github.io/blog/posts/zhihu-03/">
+      
+      
+        <link rel="prev" href="../zhihu-02/">
+      
+      
+        <link rel="next" href="../zhihu-04/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>区间长度4与整系数多项式的根分布的限制问题 - LitDarkness 的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=华文仿宋:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"华文仿宋";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="LitDarkness 的博客" class="md-header__button md-logo" aria-label="LitDarkness 的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LitDarkness 的博客
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              区间长度4与整系数多项式的根分布的限制问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/litdarkness/litdarkness.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="LitDarkness 的博客" class="md-nav__button md-logo" aria-label="LitDarkness 的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LitDarkness 的博客
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/litdarkness/litdarkness.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文章列表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文章
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            文章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    有限域上的费马大定理与 Schur 定理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    浅谈指数族
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于一道代数不等式的探究
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    区间长度4与整系数多项式的根分布的限制问题
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    区间长度4与整系数多项式的根分布的限制问题
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 预备知识
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 预备知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 切比雪夫多项式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 结式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-hadamard" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Hadamard 不等式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-minkowski" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Minkowski 定理及其线性形式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 论证思路与初步结论
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 方法一：估计范德蒙德行列式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 方法二：构造辅助多项式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 方法二：构造辅助多项式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 构造凸体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 体积估计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    罗素公理系统的几个见解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于 Kimi K3 的一点有趣思考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    当每个人都有自己的智囊团
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    谨以此篇，怀念那些古法数学的时光
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回忆篇：追忆从小到大与 AI 的接触
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="4">区间长度 4 与整系数多项式的根分布的限制问题</h1>
+<blockquote>
+<p>发布于 2025-12-16 17:29（北京），编辑于 2025-12-16 21:29（北京）</p>
+</blockquote>
+<p>我们将证明如下命题：对于任意给定的实数区间 <span class="arithmatex">\(I\)</span>，如果 <span class="arithmatex">\(|I|&lt;4\)</span>，则只有有限个不可约、首一的整系数多项式，其所有根都完全落在区间 <span class="arithmatex">\(I\)</span> 内。这个结论通常被认为是 Fekete 定理的一个特例。</p>
+<h2 id="1">1. 预备知识</h2>
+<h3 id="11">1.1 切比雪夫多项式</h3>
+<p>第一类切比雪夫多项式 <span class="arithmatex">\(T_n(x)\)</span> 由递推关系定义：</p>
+<div class="arithmatex">\[
+T_0(x)=1,\qquad T_1(x)=x,\qquad
+T_{n+1}(x)=2xT_n(x)-T_{n-1}(x).
+\]</div>
+<p>也可以通过三角函数定义：</p>
+<div class="arithmatex">\[
+T_n(x)=\cos(n\arccos x).
+\]</div>
+<p>切比雪夫多项式在这个证明中至关重要的性质有两个：</p>
+<ol>
+<li>在区间 <span class="arithmatex">\([-1,1]\)</span> 上有界：
+   <span class="arithmatex">\(\max_{x\in[-1,1]}|T_n(x)|=1\)</span></li>
+<li>当 <span class="arithmatex">\(n\ge1\)</span> 时，<span class="arithmatex">\(T_n(x)\)</span> 的最高次项系数是 <span class="arithmatex">\(2^{n-1}\)</span>。若定义首一多项式
+   <span class="arithmatex">\(\widetilde T_n(x)=2^{-(n-1)}T_n(x)\)</span>
+   那么在所有 <span class="arithmatex">\(n\)</span> 次首一多项式中，<span class="arithmatex">\(\widetilde T_n\)</span> 在 <span class="arithmatex">\([-1,1]\)</span> 上的最大绝对值是最小的，为 <span class="arithmatex">\(2^{-(n-1)}\)</span>。</li>
+</ol>
+<h3 id="12">1.2 结式</h3>
+<p>设有两个单变量多项式</p>
+<div class="arithmatex">\[
+f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,\qquad a_n\ne0,
+\]</div>
+<div class="arithmatex">\[
+g(x)=b_mx^m+b_{m-1}x^{m-1}+\cdots+b_1x+b_0,\qquad b_m\ne0.
+\]</div>
+<p>Sylvester 矩阵 <span class="arithmatex">\(\operatorname{Syl}(f,g)\)</span> 是一个 <span class="arithmatex">\((n+m)\times(n+m)\)</span> 的矩阵。它的前 <span class="arithmatex">\(m\)</span> 行由 <span class="arithmatex">\(f(x)\)</span> 的系数组成，每次向右移动一位；后 <span class="arithmatex">\(n\)</span> 行由 <span class="arithmatex">\(g(x)\)</span> 的系数组成，每次向右移动一位：</p>
+<div class="arithmatex">\[
+\operatorname{Syl}(f,g)=
+\begin{pmatrix}
+a_n&amp;a_{n-1}&amp;\cdots&amp;a_0&amp;0&amp;\cdots&amp;0\\
+0&amp;a_n&amp;a_{n-1}&amp;\cdots&amp;a_0&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\ddots&amp;\ddots&amp;\ddots&amp;\ddots&amp;\vdots\\
+0&amp;\cdots&amp;0&amp;a_n&amp;a_{n-1}&amp;\cdots&amp;a_0\\
+b_m&amp;b_{m-1}&amp;\cdots&amp;b_0&amp;0&amp;\cdots&amp;0\\
+0&amp;b_m&amp;b_{m-1}&amp;\cdots&amp;b_0&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\ddots&amp;\ddots&amp;\ddots&amp;\ddots&amp;\vdots\\
+0&amp;\cdots&amp;0&amp;b_m&amp;b_{m-1}&amp;\cdots&amp;b_0
+\end{pmatrix}.
+\]</div>
+<p>Sylvester 行列式通常被称为这两个多项式的结式，记为 <span class="arithmatex">\(\operatorname{Res}(f,g)\)</span>：</p>
+<div class="arithmatex">\[
+\operatorname{Res}(f,g)=\det\operatorname{Syl}(f,g).
+\]</div>
+<p>若 <span class="arithmatex">\(f\)</span> 的根为 <span class="arithmatex">\(\alpha_1,\dots,\alpha_n\)</span>，则</p>
+<div class="arithmatex">\[
+\operatorname{Res}(f,g)=a_n^m\prod_{i=1}^n g(\alpha_i).
+\]</div>
+<p>此外，结式和多项式的判别式 <span class="arithmatex">\(\Delta(f)\)</span> 满足：</p>
+<div class="arithmatex">\[
+a_n^{2n-2}\prod_{i&lt;j}(\alpha_i-\alpha_j)^2
+=\Delta(f)
+=\frac{(-1)^{n(n-1)/2}}{a_n}\operatorname{Res}(f,f').
+\]</div>
+<h3 id="13-hadamard">1.3 Hadamard 不等式</h3>
+<p>假设 <span class="arithmatex">\(A=(a_{ij})\)</span> 是实数矩阵。Hadamard 不等式指出，行列式的绝对值小于等于各列向量欧几里得范数的乘积：</p>
+<div class="arithmatex">\[
+|\det(A)|\le\prod_{j=1}^n\|C_j\|_2.
+\]</div>
+<p>其中 <span class="arithmatex">\(C_j\)</span> 是矩阵的第 <span class="arithmatex">\(j\)</span> 列向量：</p>
+<div class="arithmatex">\[
+C_j=(a_{1j},a_{2j},\dots,a_{nj})^{\mathsf T}.
+\]</div>
+<h3 id="14-minkowski">1.4 Minkowski 定理及其线性形式</h3>
+<p>Minkowski 第一定理（齐次形式）表述如下：对于 <span class="arithmatex">\(\mathbb{R}^n\)</span> 中的中心对称凸体 <span class="arithmatex">\(K\)</span>，若</p>
+<div class="arithmatex">\[
+\operatorname{Vol}(K)&gt;2^n\det(\Lambda),
+\]</div>
+<p>则 <span class="arithmatex">\(K\)</span> 中存在非零格点。</p>
+<h2 id="2">2. 论证思路与初步结论</h2>
+<p>不妨设 <span class="arithmatex">\(I=[a,b]\)</span>，并记 <span class="arithmatex">\(|I|=b-a&lt;4\)</span>。一方面，<span class="arithmatex">\(\operatorname{Res}(f,g)\)</span> 是整数；另一方面，如果 <span class="arithmatex">\(f\)</span> 是首一的整系数不可约多项式，那么</p>
+<div class="arithmatex">\[
+\operatorname{Res}(f,g)=\prod_{i=1}^n g(\alpha_i).
+\]</div>
+<p>如果我们能选取一个整系数多项式 <span class="arithmatex">\(g\)</span>，使得</p>
+<div class="arithmatex">\[
+\max_{x\in I}|g(x)|&lt;1,
+\]</div>
+<p>并且通常情况下 <span class="arithmatex">\(f\)</span> 与 <span class="arithmatex">\(g\)</span> 没有公共根，那么 <span class="arithmatex">\(\operatorname{Res}(f,g)\)</span> 就是一个绝对值小于 <span class="arithmatex">\(1\)</span> 的非零整数，矛盾。或者，如果能够对 <span class="arithmatex">\(\operatorname{Res}(f,f')\)</span> 做类似估计，也能完成证明。</p>
+<p>为了方便下面的论证，先证明：满足 <span class="arithmatex">\(\deg f&lt;N\)</span>，并且所有根都为实数且落在 <span class="arithmatex">\(I\)</span> 中的多项式只有有限个。事实上，所有根的取值都在 <span class="arithmatex">\(I\)</span> 中，由韦达定理可知系数都落在一个有界集合中；又由于 <span class="arithmatex">\(f\)</span> 是整系数多项式，所以满足条件的多项式只有有限个。</p>
+<h2 id="3">3. 方法一：估计范德蒙德行列式</h2>
+<p>定义区间 <span class="arithmatex">\(I\)</span> 上的 <span class="arithmatex">\(n\)</span> 阶最大范德蒙德值：</p>
+<div class="arithmatex">\[
+V_n^{\max}(I)
+=\max_{x_1,\dots,x_n\in I}\prod_{i&lt;j}|x_i-x_j|.
+\]</div>
+<p>记范德蒙德行列式为</p>
+<div class="arithmatex">\[
+V_n(x_1,\dots,x_n)=
+\begin{vmatrix}
+1&amp;x_1&amp;x_1^2&amp;\cdots&amp;x_1^{n-1}\\
+1&amp;x_2&amp;x_2^2&amp;\cdots&amp;x_2^{n-1}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+1&amp;x_n&amp;x_n^2&amp;\cdots&amp;x_n^{n-1}
+\end{vmatrix}.
+\]</div>
+<p>我们要证明：</p>
+<div class="arithmatex">\[
+\limsup_{n\to\infty}
+\left(V_n^{\max}(I)\right)^{\frac{2}{n(n-1)}}
+\le\frac{b-a}{4}.
+\]</div>
+<p>令</p>
+<div class="arithmatex">\[
+x_i=\frac{b-a}{2}t_i+\frac{a+b}{2},
+\]</div>
+<p>把 <span class="arithmatex">\(I\)</span> 映射到 <span class="arithmatex">\([-1,1]\)</span>。于是</p>
+<div class="arithmatex">\[
+V_n(x)=\left(\frac{b-a}{2}\right)^{\binom{n}{2}}V_n(t).
+\]</div>
+<p>因此只需证明在 <span class="arithmatex">\([-1,1]\)</span> 上，相应的极限上界为 <span class="arithmatex">\(1/2\)</span>。</p>
+<p>由于范德蒙德行列式的值在列变换下只差一个固定的行列式因子，我们可以用首一的归一化切比雪夫多项式基底</p>
+<div class="arithmatex">\[
+P_0(t)=1,\qquad P_k(t)=2^{-(k-1)}T_k(t)\quad(k\ge1)
+\]</div>
+<p>替换基底 <span class="arithmatex">\(\{1,t,\dots,t^{n-1}\}\)</span>。根据切比雪夫多项式的性质，对于所有 <span class="arithmatex">\(t\in[-1,1]\)</span>，</p>
+<div class="arithmatex">\[
+|P_k(t)|\le2^{-(k-1)}.
+\]</div>
+<p>构造矩阵 <span class="arithmatex">\(A=(P_{j-1}(t_i))\)</span>，则 <span class="arithmatex">\(|V_n(t)|\)</span> 与 <span class="arithmatex">\(|\det A|\)</span> 相等。利用 Hadamard 不等式，第 <span class="arithmatex">\(j\)</span> 列（对应 <span class="arithmatex">\(k=j-1\)</span>）的模长满足</p>
+<div class="arithmatex">\[
+\sqrt{\sum_{i=1}^n|P_k(t_i)|^2}
+\le\sqrt n\,2^{-(j-2)}
+\qquad(j\ge2).
+\]</div>
+<p>对于 <span class="arithmatex">\(j=1\)</span>，由于 <span class="arithmatex">\(P_0=1\)</span>，对应的列向量模长为 <span class="arithmatex">\(\sqrt n\)</span>。因此</p>
+<div class="arithmatex">\[
+|V_n(t)|
+\le n^{n/2}\prod_{k=1}^{n-1}2^{-(k-1)}
+=n^{n/2}2^{-\frac{(n-1)(n-2)}{2}}.
+\]</div>
+<p>从而</p>
+<div class="arithmatex">\[
+\limsup_{n\to\infty}|V_n(t)|^{\frac{2}{n(n-1)}}
+\le\lim_{n\to\infty}
+\left(
+n^{\frac{1}{n-1}}
+2^{-\frac{(n-1)(n-2)}{n(n-1)}}
+\right)
+=\frac12.
+\]</div>
+<p>回到原来的极限表达式，得到</p>
+<div class="arithmatex">\[
+\limsup_{n\to\infty}
+\left(V_n^{\max}(I)\right)^{\frac{2}{n(n-1)}}
+\le\frac{b-a}{4}&lt;1.
+\]</div>
+<p>因此，对于充分大的 <span class="arithmatex">\(n\)</span>，由判别式公式可以得到</p>
+<div class="arithmatex">\[
+0\le\Delta(f)
+=a_n^{2n-2}\prod_{i&lt;j}(\alpha_i-\alpha_j)^2&lt;1.
+\]</div>
+<p>但 <span class="arithmatex">\(\Delta(f)\)</span> 可以写成一个元素全为整数的行列式，所以 <span class="arithmatex">\(\Delta(f)\in\mathbb{Z}\)</span>。又因为 <span class="arithmatex">\(f\)</span> 不可约，故 <span class="arithmatex">\(f\)</span> 没有重根，从而 <span class="arithmatex">\(\Delta(f)\ne0\)</span>，矛盾。结合次数小于 <span class="arithmatex">\(n\)</span> 的多项式只有有限个，命题得证。</p>
+<h2 id="4_1">4. 方法二：构造辅助多项式</h2>
+<p>我们将证明如下引理：</p>
+<blockquote>
+<p><strong>引理：</strong> 若 <span class="arithmatex">\(|I|&lt;4\)</span>，则对于充分大的度数 <span class="arithmatex">\(d\)</span>，存在非零整系数多项式 <span class="arithmatex">\(Q(x)\)</span>，使得它在 <span class="arithmatex">\(I\)</span> 上的绝对值恒小于 <span class="arithmatex">\(1\)</span>。</p>
+</blockquote>
+<p>一旦证明了该引理，设 <span class="arithmatex">\(f(x)\)</span> 为任意满足条件的不可约多项式。若 <span class="arithmatex">\(\deg f\)</span> 足够大（大于 <span class="arithmatex">\(Q\)</span> 的度数），则 <span class="arithmatex">\(f\)</span> 与 <span class="arithmatex">\(Q\)</span> 互质。考虑它们的结式：</p>
+<div class="arithmatex">\[
+|\operatorname{Res}(f,Q)|
+=\left|\prod_{i=1}^nQ(\alpha_i)\right|.
+\]</div>
+<p>由于 <span class="arithmatex">\(\alpha_i\in I\)</span>，且在 <span class="arithmatex">\(I\)</span> 上 <span class="arithmatex">\(|Q(x)|&lt;1\)</span>，故乘积的绝对值小于 <span class="arithmatex">\(1\)</span>。但 <span class="arithmatex">\(\operatorname{Res}(f,Q)\)</span> 是整系数多项式的结式，必为整数；非零整数的绝对值不可能小于 <span class="arithmatex">\(1\)</span>，于是得到矛盾。这说明 <span class="arithmatex">\(f\)</span> 的次数不能任意大。</p>
+<p>下面证明这个引理。</p>
+<h3 id="41">4.1 构造凸体</h3>
+<p>考虑 <span class="arithmatex">\(\mathbb{R}^{d+1}\)</span>，坐标对应多项式</p>
+<div class="arithmatex">\[
+Q(x)=a_dx^d+\cdots+a_0
+\]</div>
+<p>的系数。定义集合</p>
+<div class="arithmatex">\[
+S_{\lambda,I}
+=\left\{
+(a_d,\dots,a_0)\in\mathbb{R}^{d+1}
+\;\middle|\;
+\forall x\in I,\ |Q(x)|\le\lambda
+\right\}.
+\]</div>
+<p>这是一个中心对称凸体。我们需要证明：当 <span class="arithmatex">\(\lambda\in(0,1)\)</span> 时，对于充分大的 <span class="arithmatex">\(d\)</span>，这个集合包含非零整数点。根据 Minkowski 定理，只需证明</p>
+<div class="arithmatex">\[
+\operatorname{Vol}(S_{\lambda,I})&gt;2^{d+1}.
+\]</div>
+<h3 id="42">4.2 体积估计</h3>
+<p>为了计算体积，建立一个从多项式系数空间到函数值空间的线性映射。先将区间 <span class="arithmatex">\(I=[a,b]\)</span> 仿射变换到 <span class="arithmatex">\([-1,1]\)</span>：</p>
+<div class="arithmatex">\[
+x=\frac{b-a}{2}t+\frac{a+b}{2}.
+\]</div>
+<p>定义线性映射</p>
+<div class="arithmatex">\[
+\varphi:\mathbb{R}^{d+1}\to\mathbb{R}^{d+1},
+\qquad
+Q(x)\longmapsto
+\frac{1}{\lambda}
+Q\left(\frac{b-a}{2}t+\frac{a+b}{2}\right).
+\]</div>
+<p>映射 <span class="arithmatex">\(\varphi\)</span> 的行列式包含两部分：</p>
+<ol>
+<li>系数缩放 <span class="arithmatex">\(1/\lambda\)</span> 在 <span class="arithmatex">\(d+1\)</span> 维空间贡献 <span class="arithmatex">\((1/\lambda)^{d+1}\)</span>。</li>
+<li>变量代换 <span class="arithmatex">\(x\mapsto t\)</span> 从 <span class="arithmatex">\(x^k\)</span> 到 <span class="arithmatex">\(t^k\)</span> 产生 <span class="arithmatex">\(\left(\frac{b-a}{2}\right)^k\)</span> 的因子。</li>
+</ol>
+<p>因此</p>
+<div class="arithmatex">\[
+|\det\varphi|
+=\lambda^{-(d+1)}
+\left(\frac{b-a}{2}\right)^{\frac{d(d+1)}{2}}.
+\]</div>
+<p>体积关系为</p>
+<div class="arithmatex">\[
+\operatorname{Vol}(S_{\lambda,I})
+=\lambda^{d+1}
+\left(\frac{2}{b-a}\right)^{\frac{d(d+1)}{2}}
+\operatorname{Vol}(S_{1,[-1,1]}).
+\]</div>
+<p>为了估计 <span class="arithmatex">\(\operatorname{Vol}(S_{1,[-1,1]})\)</span>，考虑切比雪夫多项式基底 <span class="arithmatex">\(\{T_0,\dots,T_d\}\)</span>。由于 <span class="arithmatex">\(|T_k(t)|\le1\)</span>，由这些多项式作为基底张成的交叉多胞形完全包含在 <span class="arithmatex">\(S_{1,[-1,1]}\)</span> 内，从而得到：</p>
+<div class="arithmatex">\[
+\operatorname{Vol}(S_{1,[-1,1]})
+\ge
+\frac{2^{d+1}}{(d+1)!}\,2^{\frac{d(d-1)}{2}}.
+\]</div>
+<p>代入之前的计算结果：</p>
+<div class="arithmatex">\[
+\operatorname{Vol}(S_{\lambda,I})
+\ge
+\lambda^{d+1}
+\left(\frac{2}{b-a}\right)^{\frac{d(d+1)}{2}}
+\frac{2^{d+1}}{(d+1)!}\,2^{\frac{d(d-1)}{2}}.
+\]</div>
+<p>整理后：</p>
+<div class="arithmatex">\[
+\operatorname{Vol}(S_{\lambda,I})
+\ge
+\lambda^{d+1}\cdot2^{d+1}\cdot
+\frac{1}{(d+1)!}\cdot
+\frac{2^{d^2}}{(b-a)^{\frac{d(d+1)}{2}}}.
+\]</div>
+<p>由于 <span class="arithmatex">\(b-a&lt;4\)</span>，通过对数估计可以证明，当 <span class="arithmatex">\(d\to\infty\)</span> 时，</p>
+<div class="arithmatex">\[
+\lim_{d\to\infty}
+\frac{\operatorname{Vol}(S_{\lambda,I})}{2^{d+1}}
+=+\infty.
+\]</div>
+<p>因此，对于充分大的 <span class="arithmatex">\(d\)</span>，满足 Minkowski 定理的使用条件，引理得证。</p>
+<h2 id="5">5. 总结</h2>
+<p>无论是通过直接估计判别式（方法一），还是利用几何数论构造辅助多项式（方法二），证明的核心都归结于区间长度与 <span class="arithmatex">\(4\)</span> 的比较。事实上，可以证明 <span class="arithmatex">\(4\)</span> 是最优常数，并且它与数学中的一些其他深刻理论有关。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

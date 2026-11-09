@@ -1,0 +1,905 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://litdarkness.github.io/blog/posts/zhihu-05/">
+      
+      
+        <link rel="prev" href="../zhihu-04/">
+      
+      
+        <link rel="next" href="../zhihu-06/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>关于 Kimi K3 的一点有趣思考 - LitDarkness 的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=华文仿宋:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"华文仿宋";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kimi-k3" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="LitDarkness 的博客" class="md-header__button md-logo" aria-label="LitDarkness 的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LitDarkness 的博客
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              关于 Kimi K3 的一点有趣思考
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/litdarkness/litdarkness.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="LitDarkness 的博客" class="md-nav__button md-logo" aria-label="LitDarkness 的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LitDarkness 的博客
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/litdarkness/litdarkness.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文章列表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文章
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            文章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    有限域上的费马大定理与 Schur 定理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    浅谈指数族
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于一道代数不等式的探究
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    区间长度4与整系数多项式的根分布的限制问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    罗素公理系统的几个见解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    关于 Kimi K3 的一点有趣思考
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于 Kimi K3 的一点有趣思考
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      引言
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 问题的起点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 攻防能力是否对称
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. “AI 可以复制”并不等于“能力可以轻易扩散”
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 这种模式为什么在政治上有吸引力
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 这种平衡能维持多久
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 国家和组织本来就拥有黑客能力
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 对“安全披露”的重新评价
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 我的最终评价
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    当每个人都有自己的智囊团
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    谨以此篇，怀念那些古法数学的时光
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回忆篇：追忆从小到大与 AI 的接触
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kimi-k3">关于 Kimi K3 的一点有趣思考</h1>
+<blockquote>
+<p>发布于 2026-07-28</p>
+</blockquote>
+<h2 id="_1">引言</h2>
+<p><strong>Kimi K3：开放、安全与算力门槛。</strong>（本文是在笔者和 ChatGPT 讨论后，由 ChatGPT 5.6 Sol 辅助生成。）</p>
+<h2 id="1">1. 问题的起点</h2>
+<p>我们最初讨论的是 Kimi K3 技术报告本身。K3 的主要特点并不只是参数量巨大，而是它把超长上下文、稀疏 MoE、长程 Agent 强化学习、低精度推理和大规模分布式部署结合成了一套完整系统。 在评价技术报告时，我最初把“安全披露不足”列为一个明显缺点。这里所谓的安全披露，是指报告没有充分说明模型在网络攻击、自主代理、权重滥用等方面的能力边界。</p>
+<p>但进一步讨论后，我们发现，这个问题不能简单处理成“能力越强，风险越大，因此越需要限制开放”。安全披露、实际风险和发布政策是三个不同问题： 安全披露是在测量模型具有哪些能力； 实际风险取决于这些能力如何被部署和使用； 是否限制开放，则是带有利益分配和权力结构的政治决定。 因此，缺乏安全评测可以被视为报告完整性不足，却不能直接推出 K3 不应开放，也不能证明闭源模型天然更加安全。</p>
+<h2 id="2">2. 攻防能力是否对称</h2>
+<p>对于网络安全，攻击能力和防御能力在知识上高度同构。 一个能够寻找漏洞、分析代码和理解系统结构的模型，既可以帮助攻击者，也可以帮助防守者。现实中的顶尖安全专家也通常同时理解攻击和防御：不知道系统如何被攻破，就很难设计真正有效的防御。 因此，“模型能够攻击”本身并不能证明它对社会的净影响为负。真正需要比较的是，它对进攻能力和防御能力分别提高了多少，以及这些能力能否在现实中落地。</p>
+<p>防御方确实存在一些额外障碍。攻击者找到一个漏洞就可能成功，防守者却要维护大量系统；攻击结果可以立即执行，而修复漏洞往往还需要审批、测试和部署。但这种不对称也不是绝对的：一个补丁一旦被广泛部署，也可以同时保护数百万台设备。 所以，AI 最终偏向攻击还是防御，并不是由模型本身决定的技术常数，而取决于组织效率、基础设施、制度安排和资源分配。 从这个意义上说，网络安全问题的确不仅是技术问题，也是政治和组织问题。</p>
+<h2 id="3-ai">3. “AI 可以复制”并不等于“能力可以轻易扩散”</h2>
+<p>讨论中一个重要修正，是不能把“权重可以复制”直接等同于“完整能力可以低成本复制”。 Kimi K3 虽然开放了权重，但它拥有约 2.8 万亿总参数，每个 token 激活约 1040 亿参数。即使采用低比特量化，完整权重仍然需要大约 1.5TB 级别的存储。要高效运行它，不仅需要大量显存，还需要高速 GPU 互联、足够的内存带宽、专业推理框架和完整的 Agent 基础设施。</p>
+<p>因此，下载 K3 权重和真正拥有一个可用的 K3 系统，是两件相差很远的事情。 对于普通个人、学生团队或一般小公司，完整私有部署并不现实。真正能够无中介地运行和修改 K3 的主体，主要还是大型企业、研究机构、国家部门，以及少数拥有充足资金和工程能力的组织。 这意味着 K3 并不是一种可以被随意分发给每个人的“小型核弹”。它更像是一种开放了设计和核心技术、但仍然需要大型基础设施才能真正使用的战略资源。</p>
+<p>因此，更准确的说法是： K3 实现的是一种由算力门槛约束的开放。 它的研究、检查和机构部署是开放的，但大众无中介运行仍然受到经济和物理条件限制。</p>
+<h2 id="4">4. 这种模式为什么在政治上有吸引力</h2>
+<p>K3 处在闭源 API 和完全个人化开放模型之间。 闭源 API 模型把最终控制权集中在模型公司手中。公司不仅拥有权重，还可以决定谁能够使用模型、可以用来做什么、什么时候停止服务。用户只能通过平台授权获得能力。 K3 则允许算力充足的机构独立部署、修改和研究模型。Moonshot 不再拥有决定谁能成为 K3 服务提供者的唯一权力。 但与此同时，K3 的规模又阻止了它迅速扩散到每一台个人电脑中。</p>
+<p>所以，K3 的开放主要不是个人层面的去中心化，而是机构层面的去中心化。它让大学、企业和国家能够摆脱对单一模型公司的依赖，却没有立刻把完整前沿能力扩散给数以亿计的匿名个人。 这使 K3 在叙事和战略上占据了一个很有利的位置： 它可以强调开放研究和技术主权； 可以挑战闭源公司垄断前沿能力的正当性； 可以允许第三方验证、部署和改造模型； 又可以依靠部署门槛降低大规模个人滥用的可能性。</p>
+<p>因此，“Open but Safe”并非完全没有根据。不过，这里的安全并不主要来自模型拒绝回答危险问题，而来自前沿能力仍然与芯片、资本、机房、网络和组织能力绑定。</p>
+<h2 id="5">5. 这种平衡能维持多久</h2>
+<p>任何技术平衡都是暂时的，但“暂时”并不等于没有价值。 如果这种算力门槛只能维持几个月，它可能只是发布初期的表面现象；如果能够维持一至三年，它就足以影响产业格局、研究生态、监管制度和下一代模型的发展。 问题是：未来是否会出现一个能在 5090 上运行、但综合能力达到 K3 水平的小模型？ 这个问题不能断言。</p>
+<p>未来模型可能通过更好的数据、蒸馏、强化学习、架构设计、工具调用、外部记忆和专用子模型，以远小于 K3 的参数量达到相近的实际效果。在某些具体 benchmark 或日常任务上，这种追赶可能很快发生。 但在单张消费级显卡上完整复现 K3 的广泛知识、多模态理解、百万上下文、复杂代码能力和长程 Agent 稳定性，仍然困难得多。</p>
+<p>我们较有信心认为，未来半年到一年内，单张 5090 不会流畅运行一个在完整综合意义上达到 K3 水平的模型。一至三年内，这种算力缓冲仍很可能有效。三年以上则存在较大不确定性，五年尺度更难作出可靠判断。 因此，K3 的算力门槛并不是永久安全机制，但它也不是毫无意义的幻觉。</p>
+<h2 id="6">6. 国家和组织本来就拥有黑客能力</h2>
+<p>另一个重要问题是：即使 K3 只能被大型组织和国家机构使用，这是否仍然构成一种前所未有的危险？ 答案未必如此。 在人类专家主导的时代，高水平网络攻击能力本来就集中在组织中。复杂的供应链攻击、零日漏洞利用、长期渗透和情报行动，通常需要由漏洞研究、逆向工程、基础设施运营、社会工程和情报支持组成的团队，而不是一个普通个人独立完成。 国家机构、军事部门、大型安全公司和成熟犯罪组织，现实中本来就拥有这样的团队。</p>
+<p>所以，AI 并不是第一次让组织具有高水平网络攻击能力。它更可能改变的是组织内部的生产方式。 过去，一个组织可能需要大量专家长时间完成漏洞分析和攻击准备。使用强模型后，较少的人类专家可能监督更多自动化实例，让模型承担扫描、代码分析、工具调用和重复试验。 这更像是算力资本对部分专业劳动的替代，而不是凭空创造出一个此前不存在的能力类别。</p>
+<p>AI 可能提高组织的吞吐量，降低部分任务所需的平均技能水平，并让中等规模国家或组织接近过去只有顶尖团队才具备的能力。但它不一定会消除组织、资金、情报和基础设施的重要性。 因此，对于真正有能力部署 K3 的主体，安全问题本来就不应主要依靠模型公司的内容过滤解决，而应进入国家能力、国际竞争、情报活动和政治约束的范畴。</p>
+<h2 id="7">7. 对“安全披露”的重新评价</h2>
+<p>经过讨论，我认为应当修正对 K3 技术报告的评价。 K3 没有充分披露网络攻击、自主代理和开放权重相关的安全评测，这说明外界难以准确判断它的能力边界。因此，从技术报告完整性和可验证性的角度，安全披露仍然有价值。 但这不能被扩大解释为： K3 已经造成了严重现实威胁； 开放权重本身是不负责任的； 闭源 API 天然更加安全； 模型公司有权以安全名义垄断能力； 所有具备双用能力的模型都应受到严格限制。</p>
+<p>安全评测应该提供可复现的事实，而不是自动赋予管制政策正当性。 更合理的做法，是分别测量模型对攻击和防御的提升，公开测试条件、成功率、成本和能力边界，然后把是否限制发布作为一个需要单独论证的政治决定。</p>
+<h2 id="8">8. 我的最终评价</h2>
+<p>我认为，我们讨论中逐渐形成的观点比“开放一定危险”或者“安全全是叙事”都更接近现实。 Kimi K3 的开放是真实的，因为其他机构可以下载、研究、修改和独立部署它；但这种开放目前主要发生在机构层面，而不是大众层面。 它的安全性也具有现实基础，因为完整能力仍然受到巨大算力、内存、互联和工程门槛的约束；但这种安全并非模型固有属性，而是一种由当代硬件和经济条件形成的暂时平衡。</p>
+<p>这种平衡可能持续一年、三年，也可能因为小模型、蒸馏和推理系统进步而更快被打破。我们不能可靠预测五年后的情况，但也不应因为它不是永久机制，就否认它在当下的意义。 从政治上看，K3 的模式比纯闭源 API 更有吸引力。它削弱了单一模型公司的控制权，让更多机构获得技术自主性，同时又没有立即造成完整前沿能力的大众化扩散。</p>
+<p>因此，我对 K3 的总体评价是： K3 代表了一种“机构开放、算力约束”的前沿模型模式。它并没有彻底解决 AI 能力扩散和安全治理问题，但在当前技术条件下，确实形成了一个兼顾开放、竞争和现实可治理性的平衡。这个平衡不是永久的，却很可能足够持久，从而产生真实的技术和政治价值。</p>
+<p>真正需要持续关注的临界点，不是“是否出现了开放权重模型”，而是： 何时会出现一个能够在普通个人设备上稳定运行、可以长期自主调用工具，并在复杂开放环境中达到前沿水平的模型。 Kimi K3 显然还没有跨过这个临界点。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

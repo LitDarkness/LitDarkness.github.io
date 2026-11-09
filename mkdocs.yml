@@ -1,0 +1,69 @@
+site_name: LitDarkness 的博客
+site_url: https://litdarkness.github.io/
+repo_url: https://github.com/litdarkness/litdarkness.github.io
+theme:
+  name: material
+  language: zh
+  font:
+    text: 华文仿宋
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist
+  - pymdownx.tilde
+plugins:
+  - search:
+      lang: zh
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Blog:
+      - 文章列表: blog/index.md
+      - 文章:
+          - 有限域上的费马大定理与 Schur 定理: blog/posts/zhihu-00.md
+          - 浅谈指数族: blog/posts/zhihu-01.md
+          - 关于一道代数不等式的探究: blog/posts/zhihu-02.md
+          - 区间长度4与整系数多项式的根分布的限制问题: blog/posts/zhihu-03.md
+          - 罗素公理系统的几个见解: blog/posts/zhihu-04.md
+          - 关于 Kimi K3 的一点有趣思考: blog/posts/zhihu-05.md
+          - 当每个人都有自己的智囊团: blog/posts/zhihu-06.md
+          - 谨以此篇，怀念那些古法数学的时光: blog/posts/zhihu-07.md
+          - 回忆篇：追忆从小到大与 AI 的接触: blog/posts/zhihu-08.md
