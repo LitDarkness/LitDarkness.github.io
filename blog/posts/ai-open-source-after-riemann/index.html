@@ -1,0 +1,927 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://litdarkness.github.io/blog/posts/ai-open-source-after-riemann/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../zhihu-08/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>黎曼猜想之后，中国开源 AI 还能追上吗？ - LitDarkness 的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=华文仿宋:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"华文仿宋";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="LitDarkness 的博客" class="md-header__button md-logo" aria-label="LitDarkness 的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LitDarkness 的博客
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              黎曼猜想之后，中国开源 AI 还能追上吗？
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/litdarkness/litdarkness.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="LitDarkness 的博客" class="md-nav__button md-logo" aria-label="LitDarkness 的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LitDarkness 的博客
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/litdarkness/litdarkness.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文章列表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文章
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            文章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    黎曼猜想之后，中国开源 AI 还能追上吗？
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    黎曼猜想之后，中国开源 AI 还能追上吗？
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      从单位距离到黎曼猜想
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepseekr1" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeepSeek‑R1 到如今
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      算力、RSI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r1" class="md-nav__link">
+    <span class="md-ellipsis">
+      下一次 R1 会从哪里来？
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    回忆篇：追忆从小到大与 AI 的接触
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    谨以此篇，怀念那些古法数学的时光
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    当每个人都有自己的智囊团
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于 Kimi K3 的一点有趣思考
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    罗素公理系统的几个见解
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    区间长度4与整系数多项式的根分布的限制问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于一道代数不等式的探究
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-00/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    有限域上的费马大定理与 Schur 定理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zhihu-01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    浅谈指数族
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ai">黎曼猜想之后，中国开源 AI 还能追上吗？</h1>
+<blockquote>
+<p>发布于 2026-11-24</p>
+</blockquote>
+<p>我怀着复杂的心情写下这篇文字。成文很大程度上参考了 Theo 的视频<a href="https://www.youtube.com/watch?v=B2rFx4Fy1us">《If you like Open Models, I’m sorry》</a>，也确实令我感同身受。</p>
+<p>最近几天，AI 圈发生了一件令人震惊的事。11 月 20 日，Levent Alpöge 公布了他与 Claude 合作得到的黎曼猜想证明，次日由 Lean 社区确认了命题与证明。与此同时，在前沿数学上，开源与闭源 AI 之间的差距已经大得惊人。<a href="https://alpo.ge/remark.pdf">Alpöge 的说明</a> · <a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean 社区的核验</a></p>
+<p>为了让平时不太频繁跟进 AI 最新进展的读者也能看清脉络，我们不妨把故事从今年 5 月说起。</p>
+<h2 id="_1">从单位距离到黎曼猜想</h2>
+<p>5 月 20 日，OpenAI 公布了一个反例，推翻了 Erdős 对平面单位距离问题提出的 <span class="arithmatex">\(n^{1+o(1)}\)</span> 上界猜想。这是他们较早在公认具有一定重要意义的数学猜想上取得的成果。此后几个月，随着模型不断迭代，AI 的数学能力持续跃升：三维情形下 Jacobian 猜想的反例、六维球面上的复结构等重要问题，接连被证明或证否。<a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">单位距离</a> · <a href="https://arxiv.org/abs/2608.00222">雅可比猜想</a> · <a href="https://cbirkbeck.github.io/hopf-s6-blueprint/Overview/The-problem/">六维球面</a></p>
+<p>9 月 8 日，决定性的一击来了。OpenAI 公布了三维 Navier–Stokes 千禧年问题 C、D 两种情形的证明，并同时公开 Lean 形式化。这些证明分别在全空间和周期域构造光滑初值与外力，使题面要求的全局光滑解无法存在。10 月 6 日，OpenAI 又在 GitHub 上公布了一批数学预印本，其中部分结果附有形式化。<a href="https://openai.com/index/navier-stokes-solution/">Navier–Stokes 公告</a> · <a href="https://github.com/openai/NavierStokesAndEuler">Lean 仓库</a> · <a href="https://github.com/openai/math">10 月成果</a></p>
+<p>11 月 20 日，Alpöge 发布了他与 Claude 合作得到的黎曼猜想证明，整个 Lean 库约有 1700 万行。次日，Lean 社区发布联合声明，宣称已经通过了形式化验证。<a href="https://alpo.ge/remark.pdf">Alpöge 的原始说明</a> · <a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean 社区联合声明</a> · <a href="https://math.mit.edu/~drew/grh/">独立核验记录</a></p>
+<p>人们过去之所以如此看重 AI 的数学能力，一方面是因为数学可以用 Lean 4 这样的工具闭环验证，另一方面，从人类学习数学的经验来看，对数学的掌控力很大程度上反映了一个人逻辑推理的严密性，更不用说它所带来的迁移能力。过往我们常常认为，数学最能考察一个人的纯粹智力，而许多工程领域所需的则偏向 know-how 型的领域知识。前者在思维上往往更加“本质”。</p>
+<p>这正是当下顶尖 AI 所到达的位置。在黎曼猜想被解决的过程中，没人会否认 AI 发挥了至关重要且无法替代的作用；也没人会否认，以任何合理的标准来衡量，顶尖 AI 的数学能力都已经超越了所有普通人类和绝大部分数学家。</p>
+<p>换句话说，如果沿用衡量人类的方式去衡量 AI，它如今欠缺的已经不是纯粹的智力。按数学标准来看，它已达到超人水准，而是各种各样的领域知识。这也是<a href="https://x.com/alexandr_wang/status/2124636606959345776?a=E7cE9PABoPwPE_PRQcw&amp;s=46">这条推文</a>所表达的核心观点。尽管这条推文是近日发布的，但在 Navier–Stokes 问题被解决之后，这一事实便已确凿无疑。</p>
+<p>那么，开源 AI 又走到了哪一步？如下 Benchmark，一看便知。</p>
+<p><img alt="FrontierMath Tier 4 评测" src="../ai-open-source-01.png" /></p>
+<p><img alt="FrontierMath Erdős 评测" src="../ai-open-source-02.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Epoch AI 评测</th>
+<th>闭源模型</th>
+<th>中国开放权重模型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FrontierMath Tier 4（v2）</td>
+<td>GPT‑6.2 Astra 100%，Claude Fable 5.2 100%。实际上，GPT‑6.1 Sol 就已经完全解决了它</td>
+<td>DeepSeek‑V4.1‑Flash 26.8%，Kimi K3.1 Pro 66%</td>
+</tr>
+<tr>
+<td>FrontierMath Erdős</td>
+<td>GPT‑6.2 Astra 7/68，GPT‑6.1 Sol 3/68</td>
+<td>Kimi K3（7 月版）0/68</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://epoch.ai/models/gpt-6-2-astra">GPT‑6.2 Astra 数据</a> · <a href="https://ai.info/tracker/benchmarks/frontiermath-tier-4">Tier 4 榜单</a> · <a href="https://www.benchleader.com/benchmarks/frontiermath_erdos">Erdős 榜单</a></p>
+<p>就算抛开这些 Benchmark，单看已公开的重大数学成果，中国的开源模型也已经落后很远。</p>
+<h2 id="deepseekr1">DeepSeek‑R1 到如今</h2>
+<p>甚至于，在我的感觉中，<strong>DeepSeek‑R1 是我印象中开源模型最接近闭源前沿的时刻，甚至那一时刻略微超过了闭源 AI。随后它被闭源 AI 反超，而如今这道差距正在越拉越大。</strong>事实上，倘若我们回忆当时的测试，DeepSeek R1 发布时，DeepSeek 在 AIME 2024 和 MATH‑500 上报告的分数都略高于 OpenAI o1‑1217。<a href="https://github.com/deepseek-ai/DeepSeek-R1#evaluation-results">DeepSeek‑R1 的评测</a></p>
+<p>我想，我恐怕永远不会忘记 2025 年 1 月用上 DeepSeek R1 时的感受。我当时问了它：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>User:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>How many r&#39;s are there in &quot;strawbery&quot;
+</span></code></pre></div>
+<p>这里我故意把单词拼错了，结果 DeepSeek 陷入到了循环之中。它开始怀疑这是不是用户在测试它，到底应该回答 2 还是回答 3，然后就无尽地思考下去。</p>
+<p>现在如果我们看到这种情况，只会认为这是 AI 出现了 Bug，认为这是 AI 陷入到了“雷霆大思考”的状态。但是当时我却有一些震撼乃至于一些恐惧，好像 AI 也具有了某一些非常类似人类的行为。</p>
+<p>是的，自此之后，我从未感觉到开源模型有如此接近过闭源 AI。接下来我们会论证为什么差距在扩大，以及为什么如果保持现状不变，差距只会越来越大。</p>
+<h2 id="rsi">算力、RSI</h2>
+<p>最大也最根本的原因，毫无疑问是算力。中国的人才和天才的数量绝不会少于美国的 Frontier Lab，但是他们能够分配到的算力资源，在中国却远远少于美国。</p>
+<p>正好，有人最近从 OpenAI 2023 年 GPT‑4 发布页的图表源码里找到了归一化前的算力数据。他们按 PF‑day 换算，得到 GPT‑4 的训练量约为 <span class="arithmatex">\(1.235\times10^{25}\)</span> FLOP。如果不知道这个数据是什么概念，我们可以和 Epoch AI 对 DeepSeek‑V4‑Pro 的估算（<span class="arithmatex">\(9.7\times10^{24}\)</span> FLOP）放在一起比较，它们处于同一个量级。</p>
+<p>可是 GPT‑4 已经是 2023 年的模型了，DeepSeek‑V4‑Pro 则是 2026 年的。如今，Epoch AI 对 GPT‑6 Astra 的估算则是 <span class="arithmatex">\(9.4\times10^{26}\)</span> FLOP，约为 DeepSeek‑V4‑Pro 的 97 倍。<a href="https://openai.com/index/gpt-4-research/">GPT‑4 发布页</a> · <a href="https://ridgerzhu.com/gpt4-scaling-ladder/">图表源码与换算</a> · <a href="https://epoch.ai/models/deepseek-v4-pro">DeepSeek‑V4‑Pro</a> · <a href="https://epoch.ai/models/gpt-6-astra">GPT‑6 Astra</a></p>
+<p>也就是说，仅做一个简单估算，当前中国 AI 实验室和顶尖 Frontier Lab 之间的算力差距已经达到 2 个数量级。</p>
+<p>如果不清楚这意味着什么，不妨回看机器学习（ML）领域的过往。AlphaZero 问世后，KataGo 的论文报告用约五十分之一的计算量达到了与所比较方法相近的学习目标。DeepNash 发布后，Ataraxos 把自博弈局数降到了约三十分之一。我们只需看看论文里需要的 Trick 数量，就知道这是何等费力的事。同时，归根结底，前者是从 0 到 1 的突破，后者是从 1 到 10 的优化。后者当然很有价值，但我们很难想象它先于前者出现。<a href="https://arxiv.org/abs/1902.10565">KataGo 论文</a> · <a href="https://www.nature.com/articles/s41586-026-11036-y">Ataraxos 论文</a> · <a href="https://www.cs.cmu.edu/~sandholm/cs15-888F26/L12_deep_rl.html">Ataraxos 与 DeepNash 的比较</a></p>
+<p>在 AI 实验室里，逻辑是相通的。更多的算力意味着可以并行更多实验、训练更大的模型，也意味着在未知方向上有更多试错的机会。</p>
+<p>如果说这样的差距已经十分巨大，那么接下来的事情只会让差距再次扩大。这就是 RSI。</p>
+<p>AI 已经在加速 AI research，这是毫无疑问的。<a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/">METR 的评估</a></p>
+<p><img alt="METR 对 AI 研发加速的评估" src="../ai-open-source-03.png" /></p>
+<p><img alt="METR 评估图表" src="../ai-open-source-04.png" /></p>
+<p>如上图，METR 估计，截至今年 10 月，Anthropic 在定义清晰的任务上提升模型能力的速度，已经接近 2024 年 3 月到 2025 年 10 月的两倍。</p>
+<p>同时，在他们进行的一项非正式员工自我报告中，员工对于 AI 提升其工作效率的幅度估算达到了超指数的速度。注意，下面这幅图是在 log scale 上绘制的非线性图表。</p>
+<p><img alt="员工自我报告" src="../ai-open-source-05.png" /></p>
+<p>总而言之，这样的趋势无疑会让先有优势的一方积累起更多的优势。</p>
+<p>与此同时，闭源模型积累了更庞大的用户群，借此收集到更多真实数据，从而更有可能训练出下一代更强的模型。反观开源阵营，为了获取数据，往往还只能拿到普通的 rollout，拿不到真正的 reasoning trace，只能采用使用中转站收集数据、进行蒸馏，乃至更加恶意的操作。</p>
+<blockquote>
+<p><strong>提示</strong> 关于蒸馏，我们有相当明确的把握，除了 Anthropic 和 OpenAI 的报告之外。7 月中旬，有用户通过 OpenCode 调用 DeepSeek 官方 API，发现部分会话的思维链变成了类似 Claude 的分段摘要，早期响应里的系统指纹也与当时公开的 V4 不同。7 月 20 日的社区记录还汇总了小样本指纹测试，其中一些高频回答与 Claude 的部分型号重合。在 <a href="https://www.whichai.dev/">WitchAI</a> 上，我们甚至能够比较清晰地感觉出他们蒸馏的是什么模型，例如 Kimi K3.1 Pro 和 GPT‑6 Astra。<a href="https://www.cocoloop.cn/t/topic/12175">7 月 20 日的社区实测记录</a> · <a href="https://www.anthropic.com/threat-intelligence-report-september-2026">Anthropic 的报告</a></p>
+</blockquote>
+<p>且不说蒸馏正在变得越来越难，蒸馏本身追赶也有天花板。回到 RSI 的角度，Anthropic 的条款限制用户用 Claude 的输出训练竞品，而 Anthropic 内部已经在用 Claude 辅助研发更强的模型。外部团队能蒸馏的是它们能接触到的模型输出，内部团队能直接用最新的内部模型做研究。这样下去，差距没有理由不被拉大。<a href="https://support.claude.com/en/articles/12326764-can-i-use-my-outputs-to-train-an-ai-model">Anthropic 的条款说明</a> · <a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/">METR 的内部研发评估</a></p>
+<p>与此同时，还有一种令我厌恶的风气，有意或者无意的 <em>benchmaxxing</em>。以下的 Benchmark 可以解释之前一部分现象，AA 上为什么之前的 Google 和一些开源模型看起来分数很高，实际上用起来非常不可用。</p>
+<p>MaxxBench 把 DeepSWE 的任务做了一些修改。DeepSeek‑V4.1‑Flash‑1017 的成绩从 77.0% 掉到 59.0%，Claude Haiku 5.5 从 59.9% 变成 59.8%。用这样的跑分来炫耀模型在实际使用中有多强，在我看来与作弊无异。<a href="https://unlap.ai/maxxbench/">MaxxBench 的对照成绩</a></p>
+<p>我理解这样做也许可以获得更多的资金，但是这并不意味着这是更好的产品。</p>
+<p>此外，另一个使人担心的情况是，如果研究人员养成了“蒸馏”的路径依赖，花费更多的精力研究如何从顶尖闭源模型上蒸馏，而不是研究如何开发新的算法，如何做更好的 RL 环境，获取更好的数据，那么我们便无法认同这样的模式能够长久诞生出真正好用的模型。</p>
+<p><img alt="MaxxBench 对照图" src="../ai-open-source-06.png" /></p>
+<h2 id="r1">下一次 R1 会从哪里来？</h2>
+<p>如果我们回顾以上的两点最核心的因素，算力和 AI 辅助的加速，任何一环在短期内都看不到缓解的可能，反而有不断扩大的倾向。</p>
+<p>试想，算力让实验室能同时试更多方向，更强的内部模型开始帮忙加速推进下一轮值得跑的方向。<strong>这两种优势会相互放大。</strong>有更多算力的团队可以让更强的模型参与更多实验，而模型越能干，同一批算力就可能产出越多有价值的结果。</p>
+<p>这样一来，即使另一个团队追平了今天公开的模型，领先者也已经用它的内部模型做了一轮研发。</p>
+<p>回顾下来，开源 AI 的现实确实令人悲观。我真心希望自己的判断是错的，也真心期待开源界能拿出令人振奋的成果。</p>
+<p>只是眼下的局面，实在让人无法乐观。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "navigation.expand", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

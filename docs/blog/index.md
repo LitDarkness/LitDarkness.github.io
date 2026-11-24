@@ -1,7 +1,8 @@
 # Blog
 
-这里记录从知乎迁移并整理的文章。文章源稿统一保存在 `docs/blog/posts/`，网站页面由 MkDocs 自动生成。
+这里记录从知乎迁移并整理的文章，也收录其他文章。文章源稿统一保存在 `docs/blog/posts/`，网站页面由 MkDocs 自动生成。
 
+- [黎曼猜想之后，中国开源 AI 还能追上吗？](posts/ai-open-source-after-riemann.md)
 - [回忆篇：追忆从小到大与 AI 的接触](posts/zhihu-08.md)
 - [谨以此篇，怀念那些古法数学的时光](posts/zhihu-07.md)
 - [当每个人都有自己的智囊团](posts/zhihu-06.md)
